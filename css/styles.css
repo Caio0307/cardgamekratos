@@ -11,11 +11,23 @@
     --color-grey-900: rgb(20, 20, 20);
     --radius-sm: 8px; 
     --radius-full: 100%;
-
+    --spacing-10: 10px;
+    --spacing-20: 20px;
+    --spacing-30: 30px;
 }
+/* reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
 /* definindo a cor de fundo para a página */
 body {
     background-color: var(--color-grey-900);
+    font-family: "Inter", sans-serif;
 }
 /* definindo formatações que serão usadas na div */
 .container {
@@ -24,7 +36,8 @@ body {
     width: 500px;
     text-align: center;
     border-radius: var(--radius-sm);
-
+    padding: var(--spacing-20);
+    margin: var(--spacing-20)auto ;
 }
 .container img{
     border-radius: var(--radius-full);
@@ -34,9 +47,49 @@ body {
 .container:hover img {
     border-color: var(--color-red);
     scale: 1.1;
+}
 
+.container h1{
+    font-size: 42px;
+    font-weight: 300;
+    margin-block: var(--spacing-20);
 }
 /* efeito cascata: a formatação que estiver mais abaixo é a que prevalece */
 h2{
     color: var(--color-red);
+    font-size: 26px;
+    font-weight: 200;
+    margin-bottom:  var(--spacing-20);
 }
+
+.container p {
+    font-size: 16px;
+    font-weight: 400;
+    color: brown;
+    margin-bottom:  var(--spacing-20);
+}
+.social {
+    list-style: none;
+
+
+}
+
+.social li{
+    background-color: var(--color-grey-700);
+    margin-block:  var(--spacing-20);
+    padding-block: var(--spacing-10);
+    border-radius: var(--radius-sm);
+}
+.social li:hover {
+    background-color: var(--color-red);
+
+}
+
+.social a{
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    
+}
+
